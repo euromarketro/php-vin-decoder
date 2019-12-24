@@ -28,7 +28,7 @@ class VIN {
 	*
 	* @param string $vin
 	* @return None
-	* @throws TypeError, InvalidLengthException, InvalidCharacterException
+	* @throws TypeError, InvalidLengthException, InvalidCharacterException, InvalidYearException
 	**/
 	public function __construct(string $vin, int $year = 0) {
 		// Checks
@@ -56,7 +56,7 @@ class VIN {
 	**/
 	public function __tostring() : string {
 		// Return
-		return sprintf("VIN:%s Country:%s Region:%s", $this->VIN, $this->country(), $this->Region);
+		return sprintf("VIN:%s Country:%s Region:%s", $this->VIN, $this->country(), $this->region());
 	}
 
 	/**
